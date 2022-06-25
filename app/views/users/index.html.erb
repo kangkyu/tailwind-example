@@ -5,8 +5,8 @@
 
 <div class="p-10">
   <h1 class="mb-4 text-4xl font-black">Users</h1>
-  <table>
-    <thead>
+  <table class="min-w-full table-auto">
+    <thead class="bg-gray-800 text-gray-300" >
       <tr>
         <th>Email</th>
         <th>Password</th>
@@ -16,7 +16,7 @@
 
     <tbody>
       <% @users.each do |user| %>
-        <tr>
+        <tr class="border-4 border-gray-200">
           <td><%= user.email %></td>
           <td><%= user.password %></td>
           <td><%= link_to 'Show', user %></td>
