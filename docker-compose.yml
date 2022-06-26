@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  postgres:
+    image: postgres:14.4
+    environment:
+      POSTGRES_PASSWORD: awesome_password
+    ports:
+      - "5432:5432"
+
+  tailwind-example:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    depends_on:
+      - postgres
+    volumes:
+      - type: bind
+        source: ./
+        target: /app
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:awesome_password@postgres:5432/tailwind_example_development
+      - RAILS_ENV=development

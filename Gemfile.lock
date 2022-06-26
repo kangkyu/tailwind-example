@@ -129,9 +129,9 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
-    nokogiri (1.13.6-arm64-darwin)
+    nokogiri (1.13.6-aarch64-linux)
       racc (~> 1.4)
-    nokogiri (1.13.6-x86_64-linux)
+    nokogiri (1.13.6-arm64-darwin)
       racc (~> 1.4)
     pg (1.4.1)
     public_suffix (4.0.7)
@@ -188,9 +188,9 @@ GEM
     stimulus-rails (1.0.4)
       railties (>= 6.0.0)
     strscan (3.0.3)
-    tailwindcss-rails (2.0.10-arm64-darwin)
+    tailwindcss-rails (2.0.10-aarch64-linux)
       railties (>= 6.0.0)
-    tailwindcss-rails (2.0.10-x86_64-linux)
+    tailwindcss-rails (2.0.10-arm64-darwin)
       railties (>= 6.0.0)
     thor (1.2.1)
     timeout (0.3.0)
@@ -218,8 +218,8 @@ GEM
     zeitwerk (2.6.0)
 
 PLATFORMS
+  aarch64-linux
   arm64-darwin-21
-  x86_64-linux
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
