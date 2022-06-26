@@ -1,0 +1,14 @@
+FROM ruby:3.0.4
+
+WORKDIR /app
+
+RUN apt-get update
+RUN gem install bundler:2.3.16
+
+COPY Gemfile* /app/
+RUN bundle install
+
+COPY . /app/
+
+EXPOSE 3000
+CMD ./bin/dev
